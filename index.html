@@ -3,243 +3,966 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheaton Roofing - Your Local Business Solution</title>
+    <title>Wheaton Roofing</title>
     <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'forest': '#2d5016',
+                        'leaf': '#4a7c59',
+                        'sage': '#7d8c7d',
+                        'warm': '#faf8f5',
+                        'cream': '#f5f0e8',
+                        'clay': '#b8a898',
+                        'bark': '#5c4a3d',
+                        'sun': '#e8a945',
+                        'paper': '#faf9f7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .style-section { display: none; }
+        .style-section.active { display: block; }
+        .dot-pattern {
+            background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Sticky Header -->
-    <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <h1 class="text-xl md:text-2xl font-bold">🏠 Wheaton Roofing</h1>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#services" class="hover:text-blue-200 transition-colors">Services</a>
-                    <a href="#about" class="hover:text-blue-200 transition-colors">About</a>
-                    <a href="#contact" class="hover:text-blue-200 transition-colors">Contact</a>
+<body class="bg-white">
+    
+    <!-- Style Selector (Fixed) -->
+    <div class="fixed top-4 right-4 z-[100] bg-white rounded-lg shadow-xl p-3 border border-gray-200">
+        <label class="block text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">Preview Style</label>
+        <select id="styleSelector" class="text-sm font-medium border border-gray-300 rounded px-3 py-2 pr-8 bg-white text-gray-900 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="bold-local">Bold Local</option>
+            <option value="soft-studio">Soft Studio</option>
+            <option value="sharp-grid">Sharp Grid</option>
+            <option value="neighborhood">Neighborhood</option>
+            <option value="minimal-dark">Minimal Dark</option>
+        </select>
+    </div>
+
+    <!-- ==================== STYLE 1: BOLD LOCAL ==================== -->
+    <div id="bold-local" class="style-section">
+        <header class="bg-white border-b-4 border-black sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+                <span class="text-xl font-black uppercase tracking-tight">Wheaton Roofing</span>
+                <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
+                    <a href="#" class="hover:text-green-600 transition-colors">Services</a>
+                    <a href="#" class="hover:text-green-600 transition-colors">About</a>
+                    <a href="#" class="hover:text-green-600 transition-colors">Contact</a>
                 </nav>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-800 to-blue-900 text-white py-16 md:py-24">
-        <div class="container mx-auto px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">Your Local Business Solution Starts Here</h2>
-                <p class="text-lg md:text-xl mb-8 text-blue-100">Serving West Chicago, IL with personalized, community-focused roofing services you can trust</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">Get Free Estimate</a>
-                    <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">Our Services</a>
+        <section class="py-20 md:py-32 px-4">
+            <div class="container mx-auto max-w-5xl">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none text-black mb-8">
+                    Your Local Business Solution Starts Here<br><span class="text-green-600">Done Right.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mb-10">
+                    This appears to be a new local business without an established online presence or customer reviews yet. Without specific category details, location, or services information, this business represents a blank slate opportunity for digital marketing and web presence development.
+                </p>
+                <a href="#" class="inline-block bg-black text-white px-10 py-5 text-lg font-bold uppercase tracking-wide hover:bg-green-600 transition-colors">
+                    Get Free Quote →
+                </a>
+            </div>
+        </section>
+
+        <section class="border-t-4 border-black">
+            <div class="container mx-auto max-w-5xl">
+                <div class="py-12 px-4">
+                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400">What We Do</span>
+                </div>
+                <div class="border-t border-gray-200">
+                    <div class="border-b border-gray-200 py-8 px-4 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <div class="flex items-baseline gap-6">
+                            <span class="text-green-600 font-black text-2xl">01</span>
+                            <span class="text-2xl md:text-3xl font-bold">Tree Trimming & Pruning</span>
+                        </div>
+                        <span class="text-3xl text-gray-300">→</span>
+                    </div>
+                    <div class="border-b border-gray-200 py-8 px-4 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <div class="flex items-baseline gap-6">
+                            <span class="text-green-600 font-black text-2xl">02</span>
+                            <span class="text-2xl md:text-3xl font-bold">Tree Removal</span>
+                        </div>
+                        <span class="text-3xl text-gray-300">→</span>
+                    </div>
+                    <div class="border-b border-gray-200 py-8 px-4 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <div class="flex items-baseline gap-6">
+                            <span class="text-green-600 font-black text-2xl">03</span>
+                            <span class="text-2xl md:text-3xl font-bold">Tree Planting</span>
+                        </div>
+                        <span class="text-3xl text-gray-300">→</span>
+                    </div>
+                    <div class="border-b border-gray-200 py-8 px-4 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <div class="flex items-baseline gap-6">
+                            <span class="text-green-600 font-black text-2xl">04</span>
+                            <span class="text-2xl md:text-3xl font-bold">Emergency Services</span>
+                        </div>
+                        <span class="text-3xl text-gray-300">→</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 md:py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Professional Roofing Services</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive roofing solutions for your home or business in the West Chicago area</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <span class="text-2xl">🔨</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Roof Repair</h3>
-                    <p class="text-gray-600">Expert repair services to fix leaks, damaged shingles, and structural issues quickly and effectively.</p>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <span class="text-2xl">🏗️</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">New Installations</h3>
-                    <p class="text-gray-600">Complete roof installations using quality materials and expert craftsmanship for lasting protection.</p>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                        <span class="text-2xl">🔍</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Inspections</h3>
-                    <p class="text-gray-600">Thorough roof inspections to identify potential issues and ensure your roof's long-term performance.</p>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <span class="text-2xl">🌧️</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Storm Damage</h3>
-                    <p class="text-gray-600">Emergency storm damage repair and restoration services to protect your property.</p>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                        <span class="text-2xl">🏢</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Commercial Roofing</h3>
-                    <p class="text-gray-600">Specialized commercial roofing services for businesses and industrial properties.</p>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                        <span class="text-2xl">🔧</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Maintenance</h3>
-                    <p class="text-gray-600">Regular maintenance programs to extend your roof's lifespan and prevent costly repairs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 md:py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Wheaton Roofing</h2>
-                    <p class="text-lg text-gray-600">Your trusted local roofing partner in West Chicago, IL</p>
-                </div>
-                
+        <section class="py-20 md:py-32 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-5xl">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <div class="w-full h-64 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg flex items-center justify-center">
-                            <span class="text-6xl">🏠</span>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">About Us</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-black mb-6">Local Expertise, Quality Results</h2>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Wheaton Roofing is your new local partner in West Chicago. We bring personalized attention and competitive pricing.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-3 h-3 bg-green-600"></div>
+                                <span class="font-bold">West Chicago-Based Business</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-3 h-3 bg-green-600"></div>
+                                <span class="font-bold">Competitive Pricing</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-3 h-3 bg-green-600"></div>
+                                <span class="font-bold">Environmentally Responsible</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">Community-Focused Excellence</h3>
-                        <p class="text-gray-600 mb-6">At Wheaton Roofing, we're committed to serving our West Chicago community with personalized, professional roofing services. We understand that your roof is one of your most important investments, and we're here to protect it.</p>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-green-600">✓</span>
-                                </div>
-                                <span class="text-gray-700">Local, community-focused business</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-green-600">✓</span>
-                                </div>
-                                <span class="text-gray-700">Professional, licensed services</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-green-600">✓</span>
-                                </div>
-                                <span class="text-gray-700">Personalized customer service</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-green-600">✓</span>
-                                </div>
-                                <span class="text-gray-700">Quality workmanship guaranteed</span>
-                            </div>
-                        </div>
+                    <div class="bg-black h-80 flex items-center justify-center">
+                        <span class="text-white text-9xl font-black">W</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 md:py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-                    <p class="text-lg text-gray-600">Ready to start your roofing project? Contact us today for a free estimate</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-12">
+        <section class="bg-black text-white py-16 md:py-24 px-4">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 class="text-4xl md:text-6xl font-black mb-6">Ready to get started?</h2>
+                <p class="text-xl text-gray-400 mb-10">Free quotes. No obligation.</p>
+                <a href="#" class="inline-block bg-white text-black px-10 py-5 text-lg font-bold uppercase tracking-wide hover:bg-green-600 hover:text-white transition-colors">
+                    Contact Us Now
+                </a>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 px-4">
+            <div class="container mx-auto max-w-5xl">
+                <div class="grid md:grid-cols-2 gap-16">
                     <div>
-                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Contact Information</h3>
-                        
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">Contact</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-black mb-8">Get In Touch</h2>
                         <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                                    <span class="text-blue-600">📍</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Location</h4>
-                                    <p class="text-gray-600">141 W Grand Lake Blvd<br>West Chicago, IL 60185</p>
-                                </div>
+                            <div>
+                                <p class="font-bold text-lg">Address</p>
+                                <p class="text-gray-600">141 W Grand Lake Blvd, West Chicago, IL 60185, USA</p>
                             </div>
-                            
-                            <div class="flex items-start">
-                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                                    <span class="text-green-600">📞</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Phone</h4>
-                                    <p class="text-gray-600">(630) 555-0123</p>
-                                </div>
+                            <div>
+                                <p class="font-bold text-lg">Phone</p>
+                                <p class="text-gray-600">(630) 668-8532</p>
                             </div>
-                            
-                            <div class="flex items-start">
-                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                                    <span class="text-orange-600">📧</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Email</h4>
-                                    <p class="text-gray-600">info@wheatonroofing.com</p>
-                                </div>
+                            <div>
+                                <p class="font-bold text-lg">Email</p>
+                                <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="046d6a626b446169746d766170766161776176726d6761772a676b69">[email&#160;protected]</a></p>
                             </div>
                         </div>
                     </div>
-                    
                     <div>
-                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Send Us a Message</h3>
-                        
                         <form class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your name">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your phone number">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your email">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your roofing needs"></textarea>
-                            </div>
-                            
-                            <button type="button" class="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors">Send Message</button>
+                            <input type="text" placeholder="Your Name" class="w-full border-b-2 border-black bg-transparent py-4 text-lg focus:outline-none focus:border-green-600">
+                            <input type="email" placeholder="Email Address" class="w-full border-b-2 border-black bg-transparent py-4 text-lg focus:outline-none focus:border-green-600">
+                            <input type="tel" placeholder="Phone Number" class="w-full border-b-2 border-black bg-transparent py-4 text-lg focus:outline-none focus:border-green-600">
+                            <textarea placeholder="Tell us about your project..." rows="4" class="w-full border-b-2 border-black bg-transparent py-4 text-lg focus:outline-none focus:border-green-600 resize-none"></textarea>
+                            <button type="button" class="w-full bg-black text-white py-5 text-lg font-bold uppercase tracking-wide hover:bg-green-600 transition-colors">
+                                Send Message
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <div class="mb-4">
-                    <h3 class="text-xl font-bold mb-2">🏠 Wheaton Roofing</h3>
-                    <p class="text-gray-400">Your trusted local roofing partner in West Chicago, IL</p>
-                </div>
-                
-                <div class="border-t border-gray-700 pt-4">
-                    <p class="text-gray-400 mb-2">© 2026 Wheaton Roofing</p>
-                    <p class="text-xs text-gray-500">Preview site by Nick Sheetz</p>
-                </div>
+        <footer class="border-t-4 border-black py-8 px-4">
+            <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4">
+                <span class="font-black uppercase">Wheaton Roofing</span>
+                <p class="text-sm text-gray-500">© 2026 Wheaton Roofing. All rights reserved.</p>
+                <p class="text-xs text-gray-400">Preview site by Nick Sheetz</p>
             </div>
+        </footer>
+    </div>
+
+    <!-- ==================== STYLE 2: SOFT STUDIO ==================== -->
+    <div id="soft-studio" class="style-section">
+        <div class="bg-warm min-h-screen">
+            <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+                <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+                    <span class="text-xl font-medium text-forest">Wheaton Roofing</span>
+                    <nav class="hidden md:flex space-x-8 text-sm text-gray-600">
+                        <a href="#" class="hover:text-forest transition-colors">Services</a>
+                        <a href="#" class="hover:text-forest transition-colors">About</a>
+                        <a href="#" class="hover:text-forest transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="py-16 md:py-28 px-6">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <p class="text-sage font-medium mb-4">West Chicago's Tree Care Partner</p>
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight mb-6">
+                                Your Local Business Solution Starts Here with <span class="text-forest font-normal">thoughtful expertise</span>
+                            </h1>
+                            <p class="text-lg text-gray-600 font-light mb-10 leading-relaxed">
+                                This appears to be a new local business without an established online presence or customer reviews yet. Without specific category details, location, or services information, this business represents a blank slate opportunity for digital marketing and web presence development.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#" class="bg-forest text-white px-8 py-4 rounded-full text-center font-medium hover:bg-sage transition-colors">
+                                    Request a Quote
+                                </a>
+                                <a href="#" class="border border-clay text-gray-700 px-8 py-4 rounded-full text-center font-medium hover:bg-cream transition-colors">
+                                    Our Services
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="aspect-square bg-gradient-to-br from-cream via-warm to-sage/20 rounded-3xl flex items-center justify-center">
+                                <div class="w-32 h-32 bg-gradient-to-br from-forest/30 to-sage/40 rounded-full"></div>
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-sage/40 to-forest/30 rounded-2xl -z-10"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-6 bg-cream/50">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="text-center mb-16">
+                        <p class="text-sage font-medium mb-3">What We Offer</p>
+                        <h2 class="text-3xl md:text-4xl font-light text-gray-900">Professional Tree Services</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl mb-6 flex items-center justify-center">
+                                <div class="w-6 h-6 border-2 border-forest rounded-full"></div>
+                            </div>
+                            <h3 class="text-xl font-medium text-gray-900 mb-3">Trimming & Pruning</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">Expert care to maintain healthy, beautiful trees around your property.</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl mb-6 flex items-center justify-center">
+                                <div class="w-6 h-1 bg-forest rounded-full"></div>
+                            </div>
+                            <h3 class="text-xl font-medium text-gray-900 mb-3">Tree Removal</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">Safe, efficient removal with complete cleanup service included.</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl mb-6 flex items-center justify-center">
+                                <div class="w-4 h-4 bg-forest rounded-sm"></div>
+                            </div>
+                            <h3 class="text-xl font-medium text-gray-900 mb-3">Tree Planting</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">Professional selection and planting for lasting landscape beauty.</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl mb-6 flex items-center justify-center">
+                                <div class="w-5 h-5 border-2 border-forest"></div>
+                            </div>
+                            <h3 class="text-xl font-medium text-gray-900 mb-3">Health Assessments</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">Comprehensive evaluations to keep your trees thriving year-round.</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl mb-6 flex items-center justify-center">
+                                <div class="w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-8 border-forest"></div>
+                            </div>
+                            <h3 class="text-xl font-medium text-gray-900 mb-3">Emergency Services</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">24/7 response for storm damage and urgent safety situations.</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl mb-6 flex items-center justify-center">
+                                <div class="w-6 h-6 rounded-full border-2 border-forest border-dashed"></div>
+                            </div>
+                            <h3 class="text-xl font-medium text-gray-900 mb-3">Consultations</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">Expert advice for all your tree care planning needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-6">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div class="order-2 md:order-1">
+                            <div class="aspect-[4/3] bg-gradient-to-br from-cream to-sage/20 rounded-3xl relative overflow-hidden">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-40 h-40 bg-forest/10 rounded-full"></div>
+                                </div>
+                                <div class="absolute bottom-8 right-8 w-20 h-20 bg-sage/30 rounded-2xl"></div>
+                            </div>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <p class="text-sage font-medium mb-4">About Us</p>
+                            <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-6">Local Expertise, Quality Results</h2>
+                            <p class="text-lg text-gray-600 font-light leading-relaxed mb-6">
+                                Welcome to Wheaton Roofing. As a new local business in West Chicago, we're dedicated to building lasting relationships through exceptional service.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-2 h-2 bg-sage rounded-full"></div>
+                                    <span class="text-gray-700">Local West Chicago Business</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-2 h-2 bg-sage rounded-full"></div>
+                                    <span class="text-gray-700">Personalized Service</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-2 h-2 bg-sage rounded-full"></div>
+                                    <span class="text-gray-700">Environmentally Conscious</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-6 bg-cream/50">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+                        <div class="grid md:grid-cols-2 gap-12">
+                            <div>
+                                <p class="text-sage font-medium mb-4">Get in Touch</p>
+                                <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-6">Let's discuss your project</h2>
+                                <div class="space-y-6">
+                                    <div>
+                                        <p class="text-sm text-sage mb-1">Address</p>
+                                        <p class="text-gray-900">141 W Grand Lake Blvd, West Chicago, IL 60185, USA</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-sage mb-1">Phone</p>
+                                        <p class="text-gray-900">(630) 668-8532</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-sage mb-1">Email</p>
+                                        <p class="text-gray-900"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d9b0b7bfb699bcb4a9b0abbcadabbcbcaabcabafb0babcaaf7bab6b4">[email&#160;protected]</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <form class="space-y-5">
+                                    <input type="text" placeholder="Your name" class="w-full bg-cream/50 border-0 rounded-xl px-5 py-4 focus:ring-2 focus:ring-sage focus:outline-none">
+                                    <input type="email" placeholder="Email address" class="w-full bg-cream/50 border-0 rounded-xl px-5 py-4 focus:ring-2 focus:ring-sage focus:outline-none">
+                                    <input type="tel" placeholder="Phone number" class="w-full bg-cream/50 border-0 rounded-xl px-5 py-4 focus:ring-2 focus:ring-sage focus:outline-none">
+                                    <textarea placeholder="Tell us about your project..." rows="4" class="w-full bg-cream/50 border-0 rounded-xl px-5 py-4 focus:ring-2 focus:ring-sage focus:outline-none resize-none"></textarea>
+                                    <button type="button" class="w-full bg-forest text-white py-4 rounded-xl font-medium hover:bg-sage transition-colors">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="py-12 px-6 bg-warm">
+                <div class="container mx-auto max-w-6xl text-center">
+                    <p class="text-forest font-medium mb-2">Wheaton Roofing</p>
+                    <p class="text-sm text-gray-500 mb-2">© 2026 Wheaton Roofing. All rights reserved.</p>
+                    <p class="text-xs text-clay">Preview site by Nick Sheetz</p>
+                </div>
+            </footer>
         </div>
-    </footer>
+    </div>
+
+    <!-- ==================== STYLE 3: SHARP GRID ==================== -->
+    <div id="sharp-grid" class="style-section">
+        <div class="bg-gray-50 min-h-screen">
+            <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+                <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+                    <span class="font-mono text-sm uppercase tracking-widest">Wheaton Roofing</span>
+                    <nav class="hidden md:flex space-x-10">
+                        <a href="#" class="font-mono text-xs uppercase tracking-wider text-gray-500 hover:text-green-800 transition-colors">Services</a>
+                        <a href="#" class="font-mono text-xs uppercase tracking-wider text-gray-500 hover:text-green-800 transition-colors">About</a>
+                        <a href="#" class="font-mono text-xs uppercase tracking-wider text-gray-500 hover:text-green-800 transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="border-b border-gray-200">
+                <div class="container mx-auto">
+                    <div class="grid md:grid-cols-2">
+                        <div class="p-8 md:p-16 border-r border-gray-200">
+                            <span class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-6 block">[001] Hero</span>
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+                                Your Local Business Solution Starts Here
+                            </h1>
+                            <p class="text-lg text-gray-600 mb-10 max-w-md">
+                                This appears to be a new local business without an established online presence or customer reviews yet. Without specific category details, location, or services information, this business represents a blank slate opportunity for digital marketing and web presence development.
+                            </p>
+                            <a href="#" class="inline-block bg-green-900 text-white px-8 py-4 font-mono text-sm uppercase tracking-wider hover:bg-gray-900 transition-colors">
+                                Get Quote
+                            </a>
+                        </div>
+                        <div class="bg-green-900 flex items-center justify-center p-16 min-h-[400px]">
+                            <div class="text-center">
+                                <span class="text-white/30 font-mono text-xs uppercase tracking-widest block mb-4">Est. 2026</span>
+                                <span class="text-white text-8xl font-bold">W</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="border-b border-gray-200">
+                <div class="container mx-auto">
+                    <div class="p-8 md:p-16 border-b border-gray-200">
+                        <span class="font-mono text-xs uppercase tracking-widest text-gray-400">[002] Services</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="p-8 border-b md:border-r border-gray-200">
+                            <span class="font-mono text-xs text-gray-400 mb-4 block">01</span>
+                            <h3 class="text-xl font-semibold mb-3">Trimming & Pruning</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Expert maintenance for healthy, safe, and beautiful trees on your property.</p>
+                        </div>
+                        <div class="p-8 border-b lg:border-r border-gray-200">
+                            <span class="font-mono text-xs text-gray-400 mb-4 block">02</span>
+                            <h3 class="text-xl font-semibold mb-3">Tree Removal</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Safe extraction of damaged or unwanted trees with complete site cleanup.</p>
+                        </div>
+                        <div class="p-8 border-b border-gray-200">
+                            <span class="font-mono text-xs text-gray-400 mb-4 block">03</span>
+                            <h3 class="text-xl font-semibold mb-3">Tree Planting</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Professional selection and installation for lasting landscape value.</p>
+                        </div>
+                        <div class="p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                            <span class="font-mono text-xs text-gray-400 mb-4 block">04</span>
+                            <h3 class="text-xl font-semibold mb-3">Health Care</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Comprehensive assessments and treatment plans for tree longevity.</p>
+                        </div>
+                        <div class="p-8 border-b md:border-b-0 lg:border-r border-gray-200">
+                            <span class="font-mono text-xs text-gray-400 mb-4 block">05</span>
+                            <h3 class="text-xl font-semibold mb-3">Emergency Response</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">24/7 availability for storm damage and urgent safety situations.</p>
+                        </div>
+                        <div class="p-8">
+                            <span class="font-mono text-xs text-gray-400 mb-4 block">06</span>
+                            <h3 class="text-xl font-semibold mb-3">Consultations</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Expert guidance for tree care planning and property assessment.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="border-b border-gray-200">
+                <div class="container mx-auto">
+                    <div class="grid md:grid-cols-2">
+                        <div class="p-8 md:p-16 border-r border-gray-200">
+                            <span class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-6 block">[003] About</span>
+                            <h2 class="text-3xl md:text-4xl font-semibold mb-6">Local Expertise, Quality Results</h2>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Wheaton Roofing is a new West Chicago business committed to personalized, professional tree care.
+                            </p>
+                            <div class="border-t border-gray-200 pt-6 mt-6">
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div>
+                                        <span class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Location</span>
+                                        <span class="text-sm">West Chicago, IL</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Focus</span>
+                                        <span class="text-sm">Residential & Commercial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 p-8 md:p-16 flex items-center">
+                            <div class="grid grid-cols-3 gap-4 w-full">
+                                <div class="aspect-square bg-green-900/10"></div>
+                                <div class="aspect-square bg-green-900/20"></div>
+                                <div class="aspect-square bg-green-900/10"></div>
+                                <div class="aspect-square bg-green-900/20"></div>
+                                <div class="aspect-square bg-green-900"></div>
+                                <div class="aspect-square bg-green-900/20"></div>
+                                <div class="aspect-square bg-green-900/10"></div>
+                                <div class="aspect-square bg-green-900/20"></div>
+                                <div class="aspect-square bg-green-900/10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="border-b border-gray-200">
+                <div class="container mx-auto">
+                    <div class="p-8 md:p-16 border-b border-gray-200">
+                        <span class="font-mono text-xs uppercase tracking-widest text-gray-400">[004] Contact</span>
+                    </div>
+                    <div class="grid md:grid-cols-2">
+                        <div class="p-8 md:p-16 border-r border-gray-200">
+                            <h2 class="text-3xl font-semibold mb-8">Get in Touch</h2>
+                            <div class="space-y-6">
+                                <div class="border-b border-gray-200 pb-4">
+                                    <span class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Address</span>
+                                    <p>141 W Grand Lake Blvd, West Chicago, IL 60185, USA</p>
+                                </div>
+                                <div class="border-b border-gray-200 pb-4">
+                                    <span class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Phone</span>
+                                    <p>(630) 668-8532</p>
+                                </div>
+                                <div>
+                                    <span class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Email</span>
+                                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3daddd5dcf3d6dec3dac1d6c7c1d6d6c0d6c1c5dad0d6c09dd0dcde">[email&#160;protected]</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-16 bg-white">
+                            <form class="space-y-6">
+                                <div>
+                                    <label class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Name</label>
+                                    <input type="text" class="w-full border border-gray-300 px-4 py-3 focus:border-green-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Email</label>
+                                    <input type="email" class="w-full border border-gray-300 px-4 py-3 focus:border-green-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-2">Message</label>
+                                    <textarea rows="4" class="w-full border border-gray-300 px-4 py-3 focus:border-green-900 focus:outline-none resize-none"></textarea>
+                                </div>
+                                <button type="button" class="w-full bg-green-900 text-white py-4 font-mono text-sm uppercase tracking-wider hover:bg-gray-900 transition-colors">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-white">
+                <div class="container mx-auto px-8 py-8">
+                    <div class="grid md:grid-cols-3 gap-8 items-center">
+                        <span class="font-mono text-sm uppercase tracking-widest">Wheaton Roofing</span>
+                        <p class="font-mono text-xs text-gray-400 text-center">© 2026 Wheaton Roofing</p>
+                        <p class="font-mono text-xs text-gray-300 text-right">Preview site by Nick Sheetz</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- ==================== STYLE 4: NEIGHBORHOOD ==================== -->
+    <div id="neighborhood" class="style-section">
+        <div class="bg-paper dot-pattern min-h-screen text-bark">
+            <header class="bg-paper/95 backdrop-blur-sm sticky top-0 z-50 border-b border-bark/10">
+                <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+                    <span class="text-xl font-bold text-leaf">🌳 Wheaton Roofing</span>
+                    <nav class="hidden md:flex space-x-8 text-sm">
+                        <a href="#" class="text-bark/70 hover:text-leaf transition-colors">Services</a>
+                        <a href="#" class="text-bark/70 hover:text-leaf transition-colors">About</a>
+                        <a href="#" class="text-bark/70 hover:text-leaf transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="py-16 md:py-24 px-6">
+                <div class="container mx-auto max-w-5xl">
+                    <div class="text-center">
+                        <p class="text-sun font-semibold mb-4">Proudly serving West Chicago</p>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-bark leading-tight mb-6">
+                            Your neighbors<br>trust us with<br><span class="text-leaf">their homes.</span>
+                        </h1>
+                        <p class="text-xl text-bark/70 max-w-2xl mx-auto mb-10">
+                            This appears to be a new local business without an established online presence or customer reviews yet. Without specific category details, location, or services information, this business represents a blank slate opportunity for digital marketing and web presence development.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#" class="bg-leaf text-white px-8 py-4 rounded-lg font-semibold hover:bg-bark transition-colors inline-flex items-center justify-center gap-2">
+                                Get a Free Quote 👋
+                            </a>
+                            <a href="tel:6306688532" class="border-2 border-bark text-bark px-8 py-4 rounded-lg font-semibold hover:bg-bark hover:text-white transition-colors">
+                                Call (630) 668-8532
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-16 bg-white rounded-2xl p-8 border border-bark/10 shadow-sm">
+                        <div class="grid grid-cols-3 gap-8 text-center">
+                            <div>
+                                <div class="w-16 h-16 mx-auto bg-leaf/10 rounded-full flex items-center justify-center text-2xl mb-3">🏡</div>
+                                <p class="font-semibold text-bark">Local Owned</p>
+                            </div>
+                            <div>
+                                <div class="w-16 h-16 mx-auto bg-sun/20 rounded-full flex items-center justify-center text-2xl mb-3">💰</div>
+                                <p class="font-semibold text-bark">Fair Pricing</p>
+                            </div>
+                            <div>
+                                <div class="w-16 h-16 mx-auto bg-leaf/10 rounded-full flex items-center justify-center text-2xl mb-3">🌿</div>
+                                <p class="font-semibold text-bark">Eco-Friendly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 px-6">
+                <div class="container mx-auto max-w-5xl">
+                    <div class="text-center mb-12">
+                        <p class="text-sun font-semibold mb-2">What we do</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-bark">Tree Services You Can Count On</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 border border-bark/10 hover:border-leaf/30 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-leaf/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <div class="w-6 h-6 border-2 border-leaf rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-bark mb-2">Trimming & Pruning</h3>
+                                    <p class="text-bark/70">Keep your trees healthy and your yard looking great. We'll shape things up without overdoing it.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-bark/10 hover:border-leaf/30 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-leaf/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <div class="w-6 h-1 bg-leaf rounded"></div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-bark mb-2">Tree Removal</h3>
+                                    <p class="text-bark/70">Sometimes a tree has to go. We'll take care of it safely and clean up like we were never there.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-bark/10 hover:border-leaf/30 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-leaf/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <div class="w-4 h-4 bg-leaf rounded-sm"></div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-bark mb-2">Tree Planting</h3>
+                                    <p class="text-bark/70">Want to add some shade or curb appeal? We'll help you pick the right trees and plant them properly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-bark/10 hover:border-leaf/30 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-sun/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <div class="w-5 h-5 border-2 border-sun rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-bark mb-2">Emergency Help</h3>
+                                    <p class="text-bark/70">Storm knock something down? We're here 24/7 when you need us most. Just give us a call.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 px-6">
+                <div class="container mx-auto max-w-5xl">
+                    <div class="bg-white rounded-2xl p-8 md:p-12 border border-bark/10">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <p class="text-sun font-semibold mb-2">About us</p>
+                                <h2 class="text-3xl md:text-4xl font-bold text-bark mb-6">Just good folks who love trees</h2>
+                                <p class="text-bark/70 text-lg mb-4">
+                                    Wheaton Roofing is a new local business right here in West Chicago. We're not some big corporate outfit—we're your neighbors.
+                                </p>
+                                <div class="flex items-center gap-4 p-4 bg-leaf/5 rounded-lg">
+                                    <div class="text-4xl">📍</div>
+                                    <div>
+                                        <p class="font-bold text-bark">Based in West Chicago</p>
+                                        <p class="text-bark/60 text-sm">Serving the local community</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-br from-leaf/20 to-sun/20 rounded-xl h-80 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-6xl mb-4">🌳</div>
+                                    <p class="text-bark/50 font-medium">Your Local Tree Pros</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-12 px-6">
+                <div class="container mx-auto max-w-5xl">
+                    <div class="bg-leaf rounded-2xl p-8 md:p-12 text-center text-white">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to talk trees?</h2>
+                        <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">Call us directly or send a message—we'll get back to you fast.</p>
+                        <a href="tel:6306688532" class="inline-block text-4xl md:text-5xl font-bold hover:text-sun transition-colors">
+                            (630) 668-8532
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 px-6">
+                <div class="container mx-auto max-w-3xl">
+                    <div class="bg-white rounded-2xl p-8 md:p-12 border border-bark/10">
+                        <div class="text-center mb-8">
+                            <h2 class="text-2xl md:text-3xl font-bold text-bark mb-2">Send us a message</h2>
+                            <p class="text-bark/60">We'll get back to you within 24 hours</p>
+                        </div>
+                        <form class="space-y-5">
+                            <div class="grid md:grid-cols-2 gap-5">
+                                <input type="text" placeholder="Your name" class="w-full border border-bark/20 rounded-lg px-5 py-4 focus:border-leaf focus:outline-none focus:ring-2 focus:ring-leaf/20">
+                                <input type="tel" placeholder="Phone number" class="w-full border border-bark/20 rounded-lg px-5 py-4 focus:border-leaf focus:outline-none focus:ring-2 focus:ring-leaf/20">
+                            </div>
+                            <input type="email" placeholder="Email address" class="w-full border border-bark/20 rounded-lg px-5 py-4 focus:border-leaf focus:outline-none focus:ring-2 focus:ring-leaf/20">
+                            <textarea placeholder="Tell us what you need help with..." rows="4" class="w-full border border-bark/20 rounded-lg px-5 py-4 focus:border-leaf focus:outline-none focus:ring-2 focus:ring-leaf/20 resize-none"></textarea>
+                            <button type="button" class="w-full bg-leaf text-white py-4 rounded-lg font-semibold hover:bg-bark transition-colors">
+                                Send Message 📨
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="py-8 px-6 border-t border-bark/10">
+                <div class="container mx-auto max-w-5xl text-center">
+                    <p class="text-leaf font-bold mb-2">🌳 Wheaton Roofing</p>
+                    <p class="text-bark/50 text-sm mb-2">© 2026 Wheaton Roofing. All rights reserved.</p>
+                    <p class="text-bark/30 text-xs">Preview site by Nick Sheetz</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- ==================== STYLE 5: MINIMAL DARK ==================== -->
+    <div id="minimal-dark" class="style-section">
+        <div class="bg-gray-950 text-white min-h-screen">
+            <header class="bg-gray-950/95 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
+                <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+                    <span class="text-lg font-semibold">Wheaton Roofing</span>
+                    <nav class="hidden md:flex space-x-10 text-sm text-gray-400">
+                        <a href="#" class="hover:text-lime-400 transition-colors">Services</a>
+                        <a href="#" class="hover:text-lime-400 transition-colors">About</a>
+                        <a href="#" class="hover:text-lime-400 transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="py-20 md:py-32 px-6">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <p class="text-lime-400 font-medium mb-4">West Chicago Services</p>
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                                Your Local Business Solution Starts Here, <span class="text-lime-400">done right</span>
+                            </h1>
+                            <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                                This appears to be a new local business without an established online presence or customer reviews yet. Without specific category details, location, or services information, this business represents a blank slate opportunity for digital marketing and web presence development.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#" class="bg-lime-400 text-gray-900 px-8 py-4 font-semibold hover:bg-lime-300 transition-colors text-center">
+                                    Get Free Quote
+                                </a>
+                                <a href="#" class="border border-white/20 text-white px-8 py-4 font-semibold hover:border-lime-400 hover:text-lime-400 transition-colors text-center">
+                                    View Services
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="aspect-square bg-gradient-to-br from-gray-900 via-gray-950 to-gray-800 rounded-lg relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-tr from-lime-400/10 via-transparent to-lime-400/5"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-32 h-32 border border-lime-400/30 rounded-full flex items-center justify-center">
+                                        <div class="w-20 h-20 border border-lime-400/50 rounded-full flex items-center justify-center">
+                                            <div class="w-8 h-8 bg-lime-400 rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-6 border-t border-white/10">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="mb-16">
+                        <p class="text-lime-400 font-medium mb-3">Services</p>
+                        <h2 class="text-3xl md:text-4xl font-bold">What we offer</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-gray-900/50 border border-white/10 rounded-lg p-8 hover:border-lime-400/30 transition-colors">
+                            <div class="w-12 h-12 border border-lime-400/50 rounded-lg flex items-center justify-center mb-6">
+                                <div class="w-4 h-4 bg-lime-400 rounded-full"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Trimming & Pruning</h3>
+                            <p class="text-gray-400 leading-relaxed">Expert maintenance to keep trees healthy, safe, and aesthetically pleasing.</p>
+                        </div>
+                        <div class="bg-gray-900/50 border border-white/10 rounded-lg p-8 hover:border-lime-400/30 transition-colors">
+                            <div class="w-12 h-12 border border-lime-400/50 rounded-lg flex items-center justify-center mb-6">
+                                <div class="w-6 h-0.5 bg-lime-400"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Tree Removal</h3>
+                            <p class="text-gray-400 leading-relaxed">Safe, efficient removal of unwanted or hazardous trees with complete cleanup.</p>
+                        </div>
+                        <div class="bg-gray-900/50 border border-white/10 rounded-lg p-8 hover:border-lime-400/30 transition-colors">
+                            <div class="w-12 h-12 border border-lime-400/50 rounded-lg flex items-center justify-center mb-6">
+                                <div class="w-3 h-3 bg-lime-400"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Tree Planting</h3>
+                            <p class="text-gray-400 leading-relaxed">Professional selection and installation for long-lasting landscape value.</p>
+                        </div>
+                        <div class="bg-gray-900/50 border border-white/10 rounded-lg p-8 hover:border-lime-400/30 transition-colors">
+                            <div class="w-12 h-12 border border-lime-400/50 rounded-lg flex items-center justify-center mb-6">
+                                <div class="w-5 h-5 border-2 border-lime-400 rounded-full"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Health Care</h3>
+                            <p class="text-gray-400 leading-relaxed">Comprehensive assessments and treatment to keep your trees thriving.</p>
+                        </div>
+                        <div class="bg-gray-900/50 border border-white/10 rounded-lg p-8 hover:border-lime-400/30 transition-colors">
+                            <div class="w-12 h-12 border border-lime-400/50 rounded-lg flex items-center justify-center mb-6">
+                                <div class="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-b-6 border-lime-400"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Emergency Services</h3>
+                            <p class="text-gray-400 leading-relaxed">24/7 response for storm damage and urgent safety situations.</p>
+                        </div>
+                        <div class="bg-gray-900/50 border border-white/10 rounded-lg p-8 hover:border-lime-400/30 transition-colors">
+                            <div class="w-12 h-12 border border-lime-400/50 rounded-lg flex items-center justify-center mb-6">
+                                <div class="w-5 h-5 border border-lime-400 rounded-sm"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Consultations</h3>
+                            <p class="text-gray-400 leading-relaxed">Expert advice for tree care planning and property assessments.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-6 border-t border-white/10">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-950 rounded-lg p-1">
+                            <div class="bg-gray-950 rounded-lg p-12 h-full flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-8xl font-bold text-lime-400/20 mb-4">E</div>
+                                    <p class="text-gray-500 text-sm uppercase tracking-widest">Wheaton Roofing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-lime-400 font-medium mb-4">About Us</p>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6">Local Expertise, Quality Results</h2>
+                            <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                                Wheaton Roofing is your new partner in West Chicago for professional tree care. We combine personalized attention with competitive pricing.
+                            </p>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="border-l-2 border-lime-400 pl-4">
+                                    <p class="text-white font-semibold">Local Business</p>
+                                    <p class="text-gray-500 text-sm">West Chicago-based</p>
+                                </div>
+                                <div class="border-l-2 border-lime-400 pl-4">
+                                    <p class="text-white font-semibold">Fair Pricing</p>
+                                    <p class="text-gray-500 text-sm">Competitive rates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-6 border-t border-white/10">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="grid md:grid-cols-2 gap-16">
+                        <div>
+                            <p class="text-lime-400 font-medium mb-4">Contact</p>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6">Get in touch</h2>
+                            <p class="text-gray-400 text-lg mb-10">Ready to start? Reach out for a free consultation.</p>
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 border border-white/20 rounded-lg flex items-center justify-center text-lime-400">↳</div>
+                                    <div>
+                                        <p class="text-gray-500 text-sm">Address</p>
+                                        <p class="text-white">141 W Grand Lake Blvd, West Chicago, IL 60185, USA</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 border border-white/20 rounded-lg flex items-center justify-center text-lime-400">✆</div>
+                                    <div>
+                                        <p class="text-gray-500 text-sm">Phone</p>
+                                        <p class="text-white">(630) 668-8532</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 border border-white/20 rounded-lg flex items-center justify-center text-lime-400">@</div>
+                                    <div>
+                                        <p class="text-gray-500 text-sm">Email</p>
+                                        <p class="text-white"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e78e898188a7828a978e958293958282948295918e848294c984888a">[email&#160;protected]</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-900/50 border border-white/10 rounded-lg p-8">
+                            <form class="space-y-5">
+                                <div>
+                                    <label class="text-gray-500 text-sm block mb-2">Name</label>
+                                    <input type="text" class="w-full bg-transparent border border-white/20 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-lime-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="text-gray-500 text-sm block mb-2">Email</label>
+                                    <input type="email" class="w-full bg-transparent border border-white/20 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-lime-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="text-gray-500 text-sm block mb-2">Message</label>
+                                    <textarea rows="4" class="w-full bg-transparent border border-white/20 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-lime-400 focus:outline-none resize-none"></textarea>
+                                </div>
+                                <button type="button" class="w-full bg-lime-400 text-gray-900 py-4 font-semibold hover:bg-lime-300 transition-colors">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="py-8 px-6 border-t border-white/10">
+                <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4">
+                    <span class="font-semibold">Wheaton Roofing</span>
+                    <p class="text-gray-500 text-sm">© 2026 Wheaton Roofing. All rights reserved.</p>
+                    <p class="text-gray-600 text-xs">Preview site by Nick Sheetz</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        const selector = document.getElementById('styleSelector');
+        const sections = document.querySelectorAll('.style-section');
+        const defaultStyle = 'neighborhood';
+        
+        function switchStyle(styleName) {
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            const target = document.getElementById(styleName);
+            if (target) {
+                target.classList.add('active');
+            }
+        }
+        
+        // Load saved preference or use default
+        const saved = localStorage.getItem('preferredStyle');
+        const initialStyle = saved || defaultStyle;
+        
+        selector.value = initialStyle;
+        switchStyle(initialStyle);
+        
+        selector.addEventListener('change', function() {
+            const style = this.value;
+            switchStyle(style);
+            localStorage.setItem('preferredStyle', style);
+        });
+    </script>
 </body>
 </html>
